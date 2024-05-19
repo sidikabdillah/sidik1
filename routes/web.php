@@ -14,9 +14,7 @@ use App\Http\Controllers\BookController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', \App\Http\Controllers\HomeController::class);
 
 // Rute untuk menampilkan semua buku
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
